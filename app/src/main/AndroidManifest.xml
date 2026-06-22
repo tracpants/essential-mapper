@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      Android 11+ package visibility: without this we can't see other apps, so
+      getLaunchIntentForPackage() returns null. We only need launchable apps.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:label="EssentialMapper"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EssentialMapper">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Intercepts the Essential Key via filtered key events. -->
+        <service
+            android:name=".EssentialKeyService"
+            android:exported="false"
+            android:label="EssentialMapper"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/key_log_service_config" />
+        </service>
+
+    </application>
+
+</manifest>

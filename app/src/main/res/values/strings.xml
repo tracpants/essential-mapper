@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keylog_service_description">Intercepts the Essential Key (scanCode 250) and launches apps by tap count.</string>
+</resources>

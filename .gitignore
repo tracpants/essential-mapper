@@ -1,0 +1,15 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+.kotlin/
+.claude/
+
+# Build output in any module (not just root)
+build/

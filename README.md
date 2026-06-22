@@ -7,6 +7,12 @@ Personal Android app for a **Nothing Phone (3a) Lite** that remaps the hardware
 > Status: Steps 1–4 complete + flashlight action. Live mapping: single → Claude,
 > double → Google Wallet, triple → Flashlight toggle. See [Build order](#build-order).
 
+<p align="center">
+  <img src="docs/screenshot.png" alt="EssentialMapper config screen" width="300">
+</p>
+
+<p align="center"><em>Assign any app, the flashlight toggle, or nothing to each tap count.</em></p>
+
 ---
 
 ## How the Essential Key behaves on this device
